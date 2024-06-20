@@ -40,7 +40,7 @@ function LessonButton({
   } else if (cycleIndex <= 6) {
     indentationLevel = 4 - cycleIndex;
   } else {
-    indentationLevel = cycleIndex - 0;
+    indentationLevel = cycleIndex - 8;
   }
 
   const rightPosition = indentationLevel * 40;
