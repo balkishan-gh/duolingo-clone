@@ -7,7 +7,7 @@ type Props = {
   id: number;
   title: string;
   description: string;
-  lessons: (typeof lessons.$inferSelect & { completed: boolean })[];
+  lessons: (typeof lessons.$inferSelect & { comleted: boolean })[];
   activeLesson:
     | (typeof lessons.$inferSelect & {
         unit: typeof units.$inferSelect;
@@ -29,7 +29,7 @@ function Unit({
       <div className="flex items-center flex-col relative">
         {lessons.map((lesson, index) => {
           const isCurrent = lesson.id === activeLesson?.id;
-          const isLocked = !lesson.completed && !isCurrent;
+          const isLocked = !lesson.comleted && !isCurrent;
           return (
             <LessonButton
               key={lesson.id}
